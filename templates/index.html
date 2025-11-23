@@ -1,1 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Google Search Console認証 -->
+  <meta name="google-site-verification" content="google-site-verification: google4ccd189ce3c5d1de.html" />
+  
+  <title>Kanji Name Generator - Create Your Japanese Name</title>
+  
+  <title>Kanji Name Generator - Create Your Japanese Name</title>
+        <meta name="description" content="Create your unique Japanese kanji name with meaningful symbolism. Free kanji name generator with elegant designs and detailed character meanings. Discover your perfect Japanese name today!">
+        <meta name="keywords" content="kanji name generator, japanese name, kanji translator, name in japanese, japanese characters, kanji meaning, japanese name generator, create kanji name">
+        <meta name="author" content="Kanji Name Generator">
+        
+        <!-- Open Graph (SNS共有用) -->
+        <meta property="og:title" content="Kanji Name Generator - Create Your Japanese Name">
+        <meta property="og:description" content="Transform your name into beautiful Japanese kanji characters with meaningful symbolism">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://your-site-url.vercel.app">
+        <meta property="og:image" content="https://your-site-url.vercel.app/og-image.jpg">
+        
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Kanji Name Generator">
+        <meta name="twitter:description" content="Transform your name into beautiful Japanese kanji characters">
+        
+        <!-- 言語設定 -->
+        <meta http-equiv="content-language" content="en">
+        <link rel="canonical" href="https://your-site-url.vercel.app">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700;900&family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+      background: linear-gradient(to bottom, #f5f1e8 0%, #e8dcc8 100%);
+      min-height: 100vh;
+      padding: 0;
+      line-height: 1.8;
+      color: #3a3a3a;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)), 
+                  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23c9a86a" width="1200" height="800"/><path fill="%239db88d" opacity="0.3" d="M0 400l50-16.7c50-16.6 150-50 250-50 100 0 200 33.4 300 33.4S800 333.3 900 333.3s200 33.4 300 33.4l100 16.6V800H0z"/><path fill="%23d4b87a" d="M0 500l50-16.7c50-16.6 150-50 250-50 100 0 200 33.4 300 33.4S800 433.3 900 433.3s200 33.4 300 33.4l100 16.6V800H0z"/></svg>') center/cover;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 80px 20px;
+      position: relative;
+      border-bottom: 3px solid #9db88d;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 30% 50%, rgba(157, 184, 141, 0.2), transparent 50%),
+                  radial-gradient(circle at 70% 50%, rgba(201, 168, 106, 0.2), transparent 50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', 'Noto Serif JP', serif;
+      font-size: 4em;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+      letter-spacing: 2px;
+    }
+
+    .hero .subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4em;
+      font-weight: 300;
+      opacity: 0.9;
+      line-height: 1.8;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -100px auto 0;
+      padding: 0 20px 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: white;
+      border-radius: 0;
+      padding: 60px 50px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      margin-bottom: 40px;
+      border: 1px solid #e0d5c0;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #9db88d, #c9a86a, #d4b87a, #9db88d);
+    }
+
+    .form-section-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.8em;
+      font-weight: 600;
+      color: #5a4a3a;
+      margin-bottom: 40px;
+      text-align: center;
+      letter-spacing: 2px;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .form-section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, #9db88d, #c9a86a);
+    }
+
+    .form-group {
+      margin-bottom: 35px;
+    }
+
+    label {
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-weight: 600;
+      color: #5a4a3a;
+      margin-bottom: 12px;
+      font-size: 1em;
+      letter-spacing: 1px;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 16px 20px;
+      border: 2px solid #e0d5c0;
+      border-radius: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      background: #faf8f3;
+      color: #3a3a3a;
+    }
+
+    input[type="text"]:focus,
+    select:focus {
+      outline: none;
+      border-color: #9db88d;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(157, 184, 141, 0.15);
+    }
+
+    input::placeholder {
+      color: #a89b88;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    small {
+      font-family: 'Cormorant Garamond', serif;
+      color: #8a7a6a;
+      font-size: 0.95em;
+      display: block;
+      margin-top: 8px;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    button {
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(135deg, #9db88d 0%, #b8cca8 50%, #c9a86a 100%);
+      color: white;
+      border: none;
+      border-radius: 0;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 1.2em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(157, 184, 141, 0.3);
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #8ca77d 0%, #a8bc98 50%, #b89860 100%);
+      box-shadow: 0 6px 20px rgba(157, 184, 141, 0.5);
+      transform: translateY(-2px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .results {
+      margin-top: 40px;
+    }
+
+    .results h2 {
+      font-family: 'Noto Serif JP', serif;
+      color: #5a4a3a;
+      margin-bottom: 40px;
+      font-size: 2.2em;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 3px;
+      position: relative;
+      padding-bottom: 20px;
+    }
+
+    .results h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #9db88d, #c9a86a, transparent);
+    }
+
+    .result-item {
+      background: linear-gradient(to right, #f9fdf7 0%, #ffffff 50%, #faf8f3 100%);
+      border-radius: 0;
+      padding: 40px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+      border: 1px solid #e8dcc8;
+      border-left: 4px solid #9db88d;
+      position: relative;
+    }
+
+    .result-item:hover {
+      box-shadow: 0 8px 25px rgba(157, 184, 141, 0.25);
+      border-left-width: 6px;
+      border-left-color: #c9a86a;
+      transform: translateX(5px);
+    }
+
+    .result-item::before {
+      content: '◆';
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 1.5em;
+      color: #9db88d;
+      opacity: 0.3;
+    }
+
+    .result-item::after {
+      content: '';
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      width: 30px;
+      height: 30px;
+      background: radial-gradient(circle, #9db88d, transparent);
+      opacity: 0.1;
+      border-radius: 50%;
+    }
+
+    .kanji-display {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 4em;
+      font-weight: 900;
+      background: linear-gradient(135deg, #5a4a3a 0%, #7a6a5a 50%, #5a4a3a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      letter-spacing: 12px;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 1px solid #e8dcc8;
+    }
+
+    .meaning {
+      font-family: 'Cormorant Garamond', serif;
+      color: #6a5a4a;
+      font-size: 1.2em;
+      line-height: 1.9;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+
+    .meaning strong {
+      font-weight: 600;
+      color: #5a4a3a;
+      font-family: 'Noto Serif JP', serif;
+      letter-spacing: 1px;
+    }
+
+    .description {
+      font-family: 'Cormorant Garamond', serif;
+      color: #8a7a6a;
+      font-size: 1.05em;
+      line-height: 2;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px dashed #e8dcc8;
+      font-weight: 300;
+      font-style: italic;
+    }
+
+    .decorative-element {
+      text-align: center;
+      margin: 60px 0;
+      opacity: 0.5;
+    }
+
+    .decorative-element::before {
+      content: '◇ ◆ ◇';
+      font-size: 1.2em;
+      background: linear-gradient(90deg, #9db88d, #c9a86a, #9db88d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #8a7a6a;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95em;
+      background: linear-gradient(to bottom, #f5f1e8, #e8dcc8);
+      border-top: 2px solid #9db88d;
+    }
+
+    .bamboo-accent {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 200px;
+      background: linear-gradient(180deg, 
+        transparent 0%, 
+        #9db88d 10%, 
+        #9db88d 20%, 
+        transparent 21%,
+        transparent 30%,
+        #9db88d 40%,
+        #9db88d 50%,
+        transparent 51%,
+        transparent 60%,
+        #9db88d 70%,
+        #9db88d 80%,
+        transparent 81%);
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5em;
+      }
+
+      .hero .subtitle {
+        font-size: 1.1em;
+      }
+      
+      .card {
+        padding: 40px 30px;
+      }
+      
+      .kanji-display {
+        font-size: 2.8em;
+        letter-spacing: 8px;
+      }
+
+      .container {
+        margin-top: -60px;
+      }
+
+      .bamboo-accent {
+        display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        min-height: 60vh;
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2em;
+      }
+
+      .card {
+        padding: 30px 20px;
+      }
+
+      .kanji-display {
+        font-size: 2.2em;
+        letter-spacing: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bamboo-accent"></div>
+  
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Kanji Name Generator</h1>
+      <p class="subtitle">Discover the profound beauty of Japanese characters<br>and find the perfect kanji for your name</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="form-section-title">Create Your Kanji Name</h2>
+      <form method="post">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" value="{{ name }}" placeholder="Emma, Alexander, Sophia..." required>
+        </div>
+
+        <div class="form-group">
+          <label>Pronunciation</label>
+          <input type="text" name="pronunciation" value="{{ pron }}" placeholder="emma, arekusanda, sofia..." required>
+          <small>Write how your name sounds using English letters</small>
+        </div>
+
+        <div class="form-group">
+          <label>Choose Your Character Style</label>
+          <select name="style">
+            <option value="">✧ Surprise me</option>
+            <option value="kind" {% if style=='kind' %}selected{% endif %}>優 Kind / Gentle</option>
+            <option value="strong" {% if style=='strong' %}selected{% endif %}>強 Strong / Powerful</option>
+            <option value="cute" {% if style=='cute' %}selected{% endif %}>可 Cute / Charming</option>
+            <option value="cool" {% if style=='cool' %}selected{% endif %}>酷 Cool / Smart</option>
+            <option value="soft" {% if style=='soft' %}selected{% endif %}>柔 Soft / Peaceful</option>
+            <option value="smart" {% if style=='smart' %}selected{% endif %}>智 Wise / Intelligent</option>
+            <option value="elegant" {% if style=='elegant' %}selected{% endif %}>雅 Elegant / Noble</option>
+            <option value="brave" {% if style=='brave' %}selected{% endif %}>勇 Brave / Heroic</option>
+            <option value="artistic" {% if style=='artistic' %}selected{% endif %}>芸 Artistic / Creative</option>
+            <option value="natural" {% if style=='natural' %}selected{% endif %}>然 Natural / Earthy</option>
+            <option value="mysterious" {% if style=='mysterious' %}selected{% endif %}>幻 Mysterious / Mystical</option>
+            <option value="joyful" {% if style=='joyful' %}selected{% endif %}>喜 Joyful / Happy</option>
+            <option value="calm" {% if style=='calm' %}selected{% endif %}>静 Calm / Serene</option>
+            <option value="energetic" {% if style=='energetic' %}selected{% endif %}>活 Energetic / Dynamic</option>
+          </select>
+        </div>
+
+        <button type="submit">Generate Kanji Name</button>
+      </form>
+    </div>
+
+    {% if ideas %}
+    <div class="decorative-element"></div>
+    
+    <div class="card results">
+      <h2>Your Kanji Names</h2>
+      {% for idea in ideas %}
+        <div class="result-item">
+          <div class="kanji-display">{{ idea.kanji }}</div>
+          <div class="meaning">
+            <strong>Meaning:</strong> {{ idea.meaning_en }}
+          </div>
+          <div class="description">
+            {{ idea.description }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <footer>
+    <p>Each kanji carries centuries of meaning and cultural significance</p>
+    <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.7;">© 2025 Kanji Name Generator</p>
+  </footer>
+</body>
+</html>
