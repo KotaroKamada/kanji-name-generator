@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+Sitemap: https://kanji-name-generator.vercel.app/sitemap.xml
+```
+
+4. 保存
+
+---
+
+## 完成したフォルダ構成
+```
+kanji_name_site/
+├── app.py
+├── generator.py
+├── requirements.txt
+├── vercel.json
+├── sitemap.xml          ← 新しく作成
+├── robots.txt           ← 新しく作成
+└── templates/
+    └── index.html
